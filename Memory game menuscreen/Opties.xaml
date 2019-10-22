@@ -1,0 +1,61 @@
+﻿<Page x:Class="Memory_game_menuscreen.Opties"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Memory_game_menuscreen"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OptiesScherm"
+      Background="#FF212121">
+
+    <Grid Background="#FF212121" HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="297.6"/>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="38 px" TextDecorations="{x:Null}" TextAlignment="Left" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Grid.ColumnSpan="2" Margin="0,0.2,319.8,0" >Opties</TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="28" TextAlignment="Left" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0,0.2,1.6,0.8" >Aantal spelers:</TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="28" TextAlignment="Left" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0,0.2,1.6,34.6" Grid.RowSpan="2" >Groote Speelveld:</TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="5" FontSize="28" TextAlignment="Left" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0,0.6,1.6,0.6" >Naam speler:</TextBlock>
+
+        <TextBox x:Name="Naam1" Grid.Column="1" Grid.Row="5" Width="437" HorizontalAlignment="Left" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Grid.ColumnSpan="2" Margin="222,0.6,0,0.6" FontSize="28" />
+
+        <Button x:Name="Speleraantal1" Background="PaleVioletRed" Content="1 speler" Grid.Column="2" Grid.Row="2" FontSize="28" Foreground="White" Width="160" Height="40" HorizontalAlignment="Left" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0.4,36,0,0.8" RenderTransformOrigin="1.089,0.52" Grid.RowSpan="2"/>
+
+        <Button x:Name="Speleraantal2" Background="PaleVioletRed" Content="2 spelers" Grid.Column="2" Grid.Row="2" FontSize="28" Foreground="White" Width="160" Height="40" HorizontalAlignment="Center" RenderTransformOrigin="-0.323,0.433" Margin="201.4,37,9.8,1.4" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Grid.RowSpan="2" />
+
+        <Button x:Name="Terugbutton" Background="PaleVioletRed" Content="Terug" Grid.Column="6" Grid.Row="8" FontSize="28" Foreground="White" Width="94" Height="40" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0.2,0.4,0,0.4" Grid.RowSpan="3" Click="BackToMenu" />
+
+        <Button x:Name="Speelveld1" Background="PaleVioletRed" Content="4x4" Grid.Column="2" Grid.Row="4" FontSize="28" Foreground="White" Width="160"  Height="40" HorizontalAlignment="Left" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Margin="0.4,3,0,7.4" RenderTransformOrigin="1.22,0.384"/>
+
+        <Button x:Name="Speelveld2" Background="PaleVioletRed" Content="6x6" Grid.Column="2" Grid.Row="4" FontSize="28" Foreground="White" Width="160" Height="40" RenderTransformOrigin="-0.247,0.452" Margin="201.4,3,9.8,8.2" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" />
+        
+        
+    </Grid>
+</Page>
