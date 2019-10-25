@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Week6_test
+namespace Memory_game_menuscreen
 {
     class Card
     {

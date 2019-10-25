@@ -10,12 +10,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-namespace Week6_test
+namespace Memory_game_menuscreen
 {
     class MemoryGrid
     {
         private Grid grid;
-        private int cols, rows;
+        public int cols, rows;
         private List<Card> cards = new List<Card>();
         private int NrOfClickedCards = 0;
         private int previousCard;

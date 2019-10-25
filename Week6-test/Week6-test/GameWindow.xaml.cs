@@ -13,17 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Week6_test
+namespace Memory_game_menuscreen
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWindow : Window
     {
         const int rows = 4;
         const int cols = 4;
         MemoryGrid grid;
-        public MainWindow()
+        public GameWindow()
         {
             InitializeComponent();
             grid = new MemoryGrid(MainGrid, cols, rows);
