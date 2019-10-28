@@ -19,6 +19,10 @@ namespace Week6_test
         private List<Card> cards = new List<Card>();
         private int NrOfClickedCards = 0;
         private int previousCard;
+        private int speler1points = 0;
+        private int speler2points = 0;
+        private bool speler1 = true;
+        private bool speler2 = false;
         
         
         public MemoryGrid(Grid grid, int cols, int rows)
@@ -53,6 +57,18 @@ namespace Week6_test
                         string pic2short = pic2.Substring(pic2.Length - 8);
                         if (pic1short==pic2short)
                         {
+                            if (speler1 == true)
+                            {
+                                speler1points++;
+                                speler1 = false;
+                                speler2 = true;
+                            }
+                            else
+                            {
+                                speler2points++;
+                                speler1 = true;
+                                speler2 = false;
+                            }
                             MessageBox.Show("Goed!");
                             cards[index].MakeInvisible();
                             cards[previousCard].MakeInvisible();
@@ -60,11 +76,44 @@ namespace Week6_test
                         }
                         else
                         {
-                        
+                            if (speler1 == true)
+                            {
+                                speler1 = false;
+                                speler2 = true;
+                            }
+                            else
+                            {
+                                speler1 = true;
+                                speler2 = false;
+                            }
                             MessageBox.Show("Fout");
                             cards[index].FlipToBack();
                             cards[previousCard].FlipToBack();
                             ShowCards();
+                        }
+                        if (speler1 == true)
+                        {
+                            MessageBox.Show("speler 1 is aan de beurt");
+                        }
+                        else
+                        {
+                            MessageBox.Show("speler 2 is aan de beurt");
+                        }
+                        
+                        if(speler1points + speler2points == 8)
+                        {
+                            if(speler1points > speler2points)
+                            {
+                                MessageBox.Show("Gefeliciteerd, Speler 1 heeft gewonnen");
+                            }
+                            else if (speler2points > speler1points)
+                            {
+                                MessageBox.Show("Gefeliciteerd, speler 2 heeft gewonnen");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Het is gelijkspel, beide spelers hebben goed gespeeld");
+                            }
                         }
 
                         NrOfClickedCards = 0;
@@ -128,7 +177,7 @@ namespace Week6_test
                     Image Image = new Image();
                     Image.Margin = new Thickness(10);
                     Image.MouseDown += new MouseButtonEventHandler(CardClick);
-                    Image.Source = cards[j * cols + i].Show();
+                    Image.Source = cards[(j * cols) + i].Show();
                     Image.Tag = j * cols + i;
                     Grid.SetColumn(Image, j);
                     Grid.SetRow(Image, i);

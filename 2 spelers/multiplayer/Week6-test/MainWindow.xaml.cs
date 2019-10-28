@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Week6_test
 {
     /// <summary>
@@ -22,12 +23,14 @@ namespace Week6_test
     {
         const int rows = 4;
         const int cols = 4;
+        public bool speler1, speler2;
         MemoryGrid grid;
+
         public MainWindow()
         {
             InitializeComponent();
             grid = new MemoryGrid(MainGrid, cols, rows);
             
         }
-    }
+    }      
 }

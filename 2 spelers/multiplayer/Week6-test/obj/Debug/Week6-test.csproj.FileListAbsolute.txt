@@ -1,0 +1,43 @@
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\bin\Debug\Week6-test.exe.config
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\bin\Debug\Week6-test.exe
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\bin\Debug\Week6-test.pdb
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.csprojAssemblyReference.cache
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\MainWindow.g.cs
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\App.g.cs
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.cache
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.lref
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\MainWindow.baml
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.g.resources
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6_test.Properties.Resources.resources
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.csproj.GenerateResource.cache
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.csproj.CoreCompileInputs.cache
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.exe
+C:\Users\Rick\Documents\NHL-Stenden Hogeschool\ICT jaar 1\C#\Huiswerk\Week6-test\Week6-test\obj\Debug\Week6-test.pdb
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.csprojAssemblyReference.cache
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\MainWindow.g.cs
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\App.g.cs
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.cache
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.lref
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.exe
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.pdb
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.exe.config
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.exe
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.pdb
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\MainWindow.baml
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.g.resources
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6_test.Properties.Resources.resources
+C:\Users\larsv\Documents\GitHub\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.csproj.GenerateResource.cache
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.exe.config
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.exe
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\bin\Debug\Week6-test.pdb
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.csprojAssemblyReference.cache
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\MainWindow.g.cs
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\App.g.cs
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.cache
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test_MarkupCompile.lref
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\MainWindow.baml
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.g.resources
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6_test.Properties.Resources.resources
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.csproj.GenerateResource.cache
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.exe
+D:\Memoryproject kopie\memoryf1\Week6-test\Week6-test\obj\Debug\Week6-test.pdb
