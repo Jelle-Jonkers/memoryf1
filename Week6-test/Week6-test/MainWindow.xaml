@@ -18,7 +18,7 @@
             </Grid.RowDefinitions>
             <Button FontSize="30" Grid.Column="2" Grid.Row="2" Content="RESET" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Click="reset"/>
             <Button x:Name="PauzeBtn" FontSize="30" Grid.Row="1" Content="Pauze" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Margin="25,130,25,100" Grid.RowSpan="2" Click="PauzeBtn_Click"/>
-            <Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,32,-24,32" FontSize="40" Width="199" Height="76" Foreground="White" RenderTransformOrigin="-0.701,-0.556"/>
+            <Label x:Name="lblTime" Content="00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,32,-24,32" FontSize="40" Width="199" Height="76" Foreground="White" RenderTransformOrigin="-0.701,-0.556"/>
         </Grid>
     </Grid>
 

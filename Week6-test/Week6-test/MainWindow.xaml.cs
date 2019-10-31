@@ -21,13 +21,15 @@ namespace Week6_test
     /// </summary>
     public partial class MainWindow : Window
     {
-        const int rows = 2;
-        const int cols = 2;
+        const int rows = 4;
+        const int cols = 4;
 
         private int time = 0;
         private DispatcherTimer Timer;
         bool timerrunning;
         MemoryGrid grid;
+        private string minutes;
+        private string seconds;
 
         public MainWindow()
         {
@@ -42,26 +44,19 @@ namespace Week6_test
 
         private void TimerTicks(object sender, EventArgs e)
         {
-            if (time > 608)
+            minutes = Convert.ToString(time / 60);
+            seconds = Convert.ToString(time % 60);
+
+            if(minutes.Length == 1)
             {
-                time++;
-                lblTime.Content = string.Format("00:{0}:{1}", time / 60, time % 60);
+                minutes = "0" + minutes;
             }
-            else if (time > 598)
+            if(seconds.Length == 1)
             {
-                time++;
-                lblTime.Content = string.Format("00:{0}:0{1}", time / 60, time % 60);
+                seconds = "0" + seconds;
             }
-            else if (time > 8)
-            {
-                time++;
-                lblTime.Content = string.Format("00:0{0}:{1}", time / 60, time % 60);
-            }
-            else
-            {
-                time++;
-                lblTime.Content = string.Format("00:0{0}:0{1}", time / 60, time % 60);
-            }
+            lblTime.Content = string.Format("{0}:{1}", minutes, seconds);
+            time++;
         }
         int NrofPauseClicks = 0;
 
@@ -90,8 +85,21 @@ namespace Week6_test
             gamewindow.Show();
             this.Close();
         }
+        List<string> HighScore4 = new List<string>();
+        string StringNaamSpeler1 = "jelle";
+        private void PrintHighscore()
+        { 
 
+            HighscoreTime.Content = String.Format("{0}:{1}", minutes, seconds);
+            //String.Format alleen dan met een string van de highscore list
+        }
 
+        private void SaveScore()
+        { 
+
+            //er bestaat een list genaamd highscore4 en highscore6
+
+        }
         
     }
 }

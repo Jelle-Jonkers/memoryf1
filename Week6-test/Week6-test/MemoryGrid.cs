@@ -98,6 +98,7 @@ namespace Week6_test
             if (couplecount == rows*rows / 2) {
                 Timer.Stop();
                 MessageBox.Show("Spel is klaar");
+                //TODO: roep de huidige tijd van de timer op als string
             }
         }
 
