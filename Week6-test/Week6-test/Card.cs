@@ -3,8 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Week6_test
 {
@@ -12,14 +20,18 @@ namespace Week6_test
     {
         private ImageSource front, back;
         private bool clicked, visible;
+        MemoryGrid game;
 
-        public Card(ImageSource frontOfCard)
+
+        public Card(ImageSource frontOfCard, MemoryGrid grid)
         {
             back = new BitmapImage(new Uri("driver cards/hidden.jpg", UriKind.Relative));
             clicked = false;
             visible = true;
             front = frontOfCard;
+            game = grid;
         }
+
 
         public void Clicked()
         {
@@ -33,7 +45,12 @@ namespace Week6_test
 
         public bool Clickable()
         {
-            if (clicked || !visible)
+            if (!(game.GetTimerrunning()))
+            {
+                MessageBox.Show("de game is gepauzeerd");
+                return false;
+            }
+            else if (clicked || !visible)
             {
                 return false;
             }

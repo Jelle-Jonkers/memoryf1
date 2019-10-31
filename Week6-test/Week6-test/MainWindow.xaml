@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:Week6_test"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
-        
+    <Grid Background="#ff212121">
+        <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
+
+        </Grid>
+        <Grid HorizontalAlignment="Right" Width="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button FontSize="30" Grid.Column="2" Grid.Row="2" Content="RESET" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Click="reset"/>
+            <Button x:Name="PauzeBtn" FontSize="30" Grid.Row="1" Content="Pauze" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Margin="25,130,25,100" Grid.RowSpan="2" Click="PauzeBtn_Click"/>
+            <Label x:Name="lblTime" Content="00:00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,32,-24,32" FontSize="40" Width="199" Height="76" Foreground="White" RenderTransformOrigin="-0.701,-0.556"/>
+        </Grid>
     </Grid>
+
 </Window>
