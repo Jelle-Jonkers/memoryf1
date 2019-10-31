@@ -19,7 +19,6 @@ namespace Memory_game_menuscreen
         private List<Card> cards = new List<Card>();
         private int NrOfClickedCards = 0;
         private int previousCard;
-
         
         
         public MemoryGrid(Grid grid, int cols, int rows)
@@ -32,12 +31,7 @@ namespace Memory_game_menuscreen
             ShowCards();
         }
 
-        public MemoryGrid(int rows, int cols)
-        {
-            this.rows = rows;
-            this.cols = cols;
-        }
-
+        
         private void CardClick(object sender,MouseButtonEventArgs e)
         {
             if (NrOfClickedCards < 2)

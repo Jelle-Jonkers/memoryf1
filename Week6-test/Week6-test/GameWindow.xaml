@@ -7,19 +7,8 @@
         mc:Ignorable="d"
         Title="GameWindow" Height="900" Width="1600"
         Background="#FF212121">
-
-    <Grid>
-        <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
-            
-        </Grid>
-        <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="311" Height="172" >
-            <TextBlock FontSize="50" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Foreground="White" >De Timer</TextBlock>
-        </Grid>
-        <Grid VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="150" Width="300">
-            <Button Height="75" Width="250" Content="Terug" Foreground="White" Background="PaleVioletRed" FontSize="50" Click="CloseGame" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" />
-        </Grid>
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
-            <TextBlock FontSize="50" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" >Naam Speler</TextBlock>
-        </Grid>
+    
+    <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
+        
     </Grid>
 </Window>
