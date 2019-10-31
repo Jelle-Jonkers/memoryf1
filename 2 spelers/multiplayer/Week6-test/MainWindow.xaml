@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF212121">
+
         <Grid Height="225" Width="200" HorizontalAlignment="Left">
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -17,6 +18,7 @@
             <TextBlock Grid.Row="0" Background="#FF212121" Foreground="White" >speler 1</TextBlock>
             <TextBlock Grid.Row="1" Background="#FF212121" Foreground="White" >speler 2</TextBlock>
             
+
         </Grid>
         <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
 
@@ -31,5 +33,9 @@
             <TextBlock Grid.Row="1" Foreground="White">nog een plek in het menu</TextBlock>
             <TextBlock Grid.Row="2" Foreground="White">enz.</TextBlock>
         </Grid>
+        <Button x:Name="test1btn" Content="test1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,195,0,0" Click="Test1_Click"/>
+        <Button x:Name="test2btn" Content="test2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,236,0,0" Click="Test2btn_Click"/>
+        <Button x:Name="test3btn" Content="test3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="0,280,0,0" Click="Test3btn_Click"/>
+
     </Grid>
 </Window>

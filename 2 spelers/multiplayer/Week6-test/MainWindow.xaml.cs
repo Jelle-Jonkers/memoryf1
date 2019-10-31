@@ -26,10 +26,30 @@ namespace Week6_test
         public bool speler1, speler2;
         MemoryGrid grid;
 
+        private void Test1_Click(object sender, RoutedEventArgs e)
+        {
+            winst1 w1 = new winst1();
+            this.Content = w1;
+        }
+
+        private void Test2btn_Click(object sender, RoutedEventArgs e)
+        {
+            winst2 w2 = new winst2();
+            this.Content = w2;
+        }
+
+        private void Test3btn_Click(object sender, RoutedEventArgs e)
+        {
+            gelijkspel gsp = new gelijkspel();
+            this.Content = gsp;
+        }
+
         public MainWindow()
         {
             InitializeComponent();
             grid = new MemoryGrid(MainGrid, cols, rows);
+            grid.SetWindow(this);
+            
             
         }
     }      

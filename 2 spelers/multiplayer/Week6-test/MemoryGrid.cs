@@ -23,7 +23,8 @@ namespace Week6_test
         private int speler2points = 0;
         private bool speler1 = true;
         private bool speler2 = false;
-        
+        private MainWindow window;
+         
         
         public MemoryGrid(Grid grid, int cols, int rows)
         {
@@ -33,6 +34,11 @@ namespace Week6_test
             InitializeGameGrid(cols, rows);
             AddImages();
             ShowCards();
+        }
+
+        public void SetWindow(MainWindow input)
+        {
+            this.window = input;
         }
 
         
@@ -103,17 +109,26 @@ namespace Week6_test
                         if(speler1points + speler2points == 8)
                         {
                             if(speler1points > speler2points)
-                            {
-                                MessageBox.Show("Gefeliciteerd, Speler 1 heeft gewonnen");
+                           {
+                                
+                                winst1 w1 = new winst1();
+                                window.Content = w1;
+                                
+
                             }
                             else if (speler2points > speler1points)
-                            {
-                                MessageBox.Show("Gefeliciteerd, speler 2 heeft gewonnen");
+                           {
+                                
+                                winst2 w2 = new winst2();
+                                window.Content = w2;
+
                             }
                             else
                             {
-                                MessageBox.Show("Het is gelijkspel, beide spelers hebben goed gespeeld");
-                            }
+                                
+                                gelijkspel gsp = new gelijkspel();
+                                window.Content = gsp;
+                          }
                         }
 
                         NrOfClickedCards = 0;
