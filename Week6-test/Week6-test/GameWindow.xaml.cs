@@ -20,14 +20,28 @@ namespace Memory_game_menuscreen
     /// </summary>
     public partial class GameWindow : Window
     {
-        const int rows = 4;
-        const int cols = 4;
+        public int rows = 4;
+        public int cols = 4;
         MemoryGrid grid;
+
         public GameWindow()
         {
             InitializeComponent();
             grid = new MemoryGrid(MainGrid, cols, rows);
             
         }
+        public GameWindow(int Grootte)
+        {
+            InitializeComponent();
+            grid = new MemoryGrid(MainGrid, Grootte, Grootte);
+
+        }
+
+        private void CloseGame(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }
