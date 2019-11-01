@@ -23,15 +23,34 @@ namespace Memory_game_menuscreen
     {
         public bool IsZes;
         Menu tempmenu;
+        private string naam1;
+        private string naam2;
+        public int Aantalspelers;
+        
 
         public Menu()
         {
             InitializeComponent();
+           
         }
 
         public void SetMenu(Menu menu)
         {
             this.tempmenu = menu;
+        }
+
+        public void SetAantalSpelers(int Spelers)
+        {
+            Aantalspelers = Spelers;
+        }
+
+        
+        public void SetNames(string in1, string in2)
+        {
+            this.naam1 = in1;
+            this.naam2 = in2;
+            Naamspeler1.Text = naam1;
+            Naamspeler2.Text = naam2;
         }
 
         private void ExitButton(object sender, RoutedEventArgs e)
@@ -42,6 +61,7 @@ namespace Memory_game_menuscreen
         private void ToOptions(object sender, RoutedEventArgs e)
         {
             OptionWindow1 optionWindow1 = new OptionWindow1();
+            optionWindow1.SetGameMode(optionWindow1);
             optionWindow1.SetMenu(tempmenu);
             optionWindow1.Show();
         }
@@ -55,20 +75,44 @@ namespace Memory_game_menuscreen
 
         private void SpelStarten(object sender, RoutedEventArgs e)
         {
-            if(IsZes)
+            if (Aantalspelers == 1)
             {
-                GameWindow gameWindow = new GameWindow(6);
-                gameWindow.Show();
+                if (IsZes)
+                {
+                    GameWindow gameWindow = new GameWindow(6);
+                    gameWindow.SetNames(naam1);
+                    gameWindow.Show();
+                }
+                else
+                {
+                    GameWindow gameWindow = new GameWindow(4);
+                    gameWindow.SetNames(naam1);
+                    gameWindow.Show();
+                }
             }
-            else
+            else if (Aantalspelers == 2)
             {
-                GameWindow gameWindow = new GameWindow(4);
-                gameWindow.Show();
+                if (IsZes)
+                {
+                    GameWindowMP gameWindow2 = new GameWindowMP(6);
+                    gameWindow2.SetTempGameWindow(gameWindow2);
+                    gameWindow2.SetNames(naam1, naam2);
+                    gameWindow2.Show();
+                }
+                else
+                {
+                    GameWindowMP gameWindow2 = new GameWindowMP(4);
+                    gameWindow2.SetTempGameWindow(gameWindow2);
+                    gameWindow2.SetNames(naam1, naam2);
+                    gameWindow2.Show();
+                }
+            }
+            else {
+                MessageBox.Show("Er zijn geen instellingen gekozen");
             }
 
-            
-            
-            
+
+
         }
     }
 }

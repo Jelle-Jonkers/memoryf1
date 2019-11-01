@@ -19,24 +19,24 @@ namespace Memory_game_menuscreen
     /// </summary>
     public partial class OptionWindow1 : Window
     {
-        int Aantalspelers = 1;
+        public int Aantalspelers = 0;
         bool IsZes = false;
+        string Naam1;
+        string Naam2;
         Menu menu;
-        
-        public OptionWindow1(int Aantalspelers)
-        {
-            InitializeComponent();
-            this.Aantalspelers = Aantalspelers;
-        }
+        OptionWindow1 optionWindow1;
+
         public OptionWindow1()
         {
             InitializeComponent();
+
         }
 
         public void SetMenu(Menu menu)
         {
             this.menu = menu;
         }
+
 
         private void Singleplayer(object sender, RoutedEventArgs e)
         {
@@ -49,13 +49,24 @@ namespace Memory_game_menuscreen
             Aantalspelers = 2;
             Speler2.Visibility = Visibility.Visible;
         }
+        public void namen()
+        {
+            Naam1 = Speler1.Text;
+            Naam2 = Speler2.Text;
+            menu.SetNames(Naam1, Naam2);
+        }
 
         private void Sluiten(object sender, RoutedEventArgs e)
         {
-            //TODO: Geopende menu selecteren in plaats van nieuwe aanmaken.
-            //Menu menu = new Menu();
             menu.SetIsZes(IsZes);
+            menu.SetAantalSpelers(Aantalspelers);
+            this.namen();
             this.Close();
+        }
+
+        public void SetGameMode(OptionWindow1 optionWindow1)
+        {
+            this.optionWindow1 = optionWindow1;
         }
 
         private void ZesBijZes(object sender, RoutedEventArgs e)

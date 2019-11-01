@@ -49,6 +49,10 @@
 
         <TextBlock Grid.Column="1" Grid.Row="2" FontSize="28" TextDecorations="{x:Null}" TextAlignment="Center" Foreground="White" Width="180" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular">Opties</TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="4" FontSize="15" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular"  />
+        <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Foreground="White" Text="Speler 1:"  FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" />
+        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" Foreground="White" Text="Speler 2:"  FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" />
+        <TextBlock x:Name="Naamspeler1" Grid.Column="1" Grid.Row="3" Width="100" Foreground="White" Text="" Height="37" HorizontalAlignment="Right" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular"/>
+        <TextBlock x:Name="Naamspeler2" Grid.Column="1" Grid.Row="5" Width="100" Foreground="White" Text="" Height="37" HorizontalAlignment="Right" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular"/>
 
         <TextBlock Grid.Column="5" Grid.Row="2" FontSize="28" TextDecorations="{x:Null}" TextAlignment="Center" Foreground="White" Width="180" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" >Highscores</TextBlock>
         <DockPanel>

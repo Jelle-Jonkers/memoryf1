@@ -9,6 +9,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Threading;
 
 namespace Memory_game_menuscreen
 {
@@ -19,8 +20,22 @@ namespace Memory_game_menuscreen
         private List<Card> cards = new List<Card>();
         private int NrOfClickedCards = 0;
         private int previousCard;
+        private bool timerrunning;
+        private DispatcherTimer Timer;
+
         
-        
+        public MemoryGrid(Grid grid, int cols, int rows, DispatcherTimer Timer, bool Timerrunning)
+        {
+            this.grid = grid;
+            this.rows = rows;
+            this.cols = cols;
+            this.Timer = Timer;
+            timerrunning = Timerrunning;
+            InitializeGameGrid(cols, rows);
+            AddImages();
+            ShowCards();
+        }
+
         public MemoryGrid(Grid grid, int cols, int rows)
         {
             this.grid = grid;
@@ -31,7 +46,18 @@ namespace Memory_game_menuscreen
             ShowCards();
         }
 
-        
+        public bool GetTimerrunning()
+        {
+            return timerrunning;
+        }
+
+        public void SetTimerrunning(bool value)
+        {
+            timerrunning = value;
+        }
+
+        int couplecount = 0;
+
         private void CardClick(object sender,MouseButtonEventArgs e)
         {
             if (NrOfClickedCards < 2)
@@ -53,15 +79,19 @@ namespace Memory_game_menuscreen
                         string pic2short = pic2.Substring(pic2.Length - 8);
                         if (pic1short==pic2short)
                         {
+                            Timer.Stop();
                             MessageBox.Show("Goed!");
+                            Timer.Start();
                             cards[index].MakeInvisible();
                             cards[previousCard].MakeInvisible();
+                            couplecount++;
                             ShowCards();
                         }
                         else
                         {
-                        
+                            Timer.Stop();
                             MessageBox.Show("Fout");
+                            Timer.Start();
                             cards[index].FlipToBack();
                             cards[previousCard].FlipToBack();
                             ShowCards();
@@ -76,13 +106,17 @@ namespace Memory_game_menuscreen
 
                 }
             }
+            if (couplecount == rows * rows / 2)
+            {
+                Timer.Stop();
+                MessageBox.Show("Spel is klaar");
+                //TODO: roep de huidige tijd van de timer op als string
+            }
         }
 
         private List<ImageSource> GetImageList()
         {
             List<ImageSource> images = new List<ImageSource>();
-            //TODO: path moet relatief worden. Het is nu absoluut en werkt alleen voor mijn pc.
-            //Directory.GetFiles("C:/Users/Rick/Documents/NHL-Stenden Hogeschool/ICT jaar 1/C#/Huiswerk/Week6-test/Week6-test/png", "*", SearchOption.TopDirectoryOnly).Length-1
             int ImageAmount = 20;
             for (int i = 0; i < ((cols * rows)/2); i++)
             {
@@ -112,7 +146,7 @@ namespace Memory_game_menuscreen
             {
                 for(int col = 0; col < cols; col++)
                 {
-                    cards.Add(new Card(images.First()));
+                    cards.Add(new Card(images.First(),this));
                     images.RemoveAt(0);
                     
                 }

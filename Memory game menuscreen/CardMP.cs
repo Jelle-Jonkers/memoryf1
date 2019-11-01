@@ -9,19 +9,18 @@ using System.Windows.Media.Imaging;
 
 namespace Memory_game_menuscreen
 {
-    class Card
+    class CardMP
     {
         private ImageSource front, back;
         private bool clicked, visible;
-        MemoryGrid game;
+        private ImageSource imageSource;
 
-        public Card(ImageSource frontOfCard, MemoryGrid grid)
+        public CardMP(ImageSource frontOfCard)
         {
             back = new BitmapImage(new Uri("driver cards/hidden.jpg", UriKind.Relative));
             clicked = false;
             visible = true;
             front = frontOfCard;
-            game = grid;
         }
 
         public void Clicked()
@@ -36,13 +35,8 @@ namespace Memory_game_menuscreen
 
         public bool Clickable()
         {
-            if (!(game.GetTimerrunning()))
-            {
-                MessageBox.Show("de game is gepauzeerd");
-                return false;
-                
-            }
-            else if (clicked || !visible)
+            
+            if (clicked || !visible)
             {
                 return false;
             }

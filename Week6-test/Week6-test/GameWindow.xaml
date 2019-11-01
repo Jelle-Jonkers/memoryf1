@@ -7,8 +7,23 @@
         mc:Ignorable="d"
         Title="GameWindow" Height="900" Width="1600"
         Background="#FF212121">
-    
-    <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
-        
+    <Grid>
+        <Grid x:Name="MainGrid" Margin="10" Width="{Binding ElementName=MainGrid,Path=ActualHeight}">
+
+        </Grid>
+        <Grid HorizontalAlignment="Right" Width="200">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button FontSize="30" Grid.Row="1" Content="RESET" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Click="reset" Margin="25,18,25,72"/>
+            <Button x:Name="PauzeBtn" FontSize="30" Content="Pauze" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Margin="25,103,25,127" Grid.RowSpan="2" Click="PauzeBtn_Click"/>
+            <Label x:Name="lblTime" Content="00:00" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,27,30,37" FontSize="40" Width="130" Height="76" Foreground="White" RenderTransformOrigin="-0.701,-0.556"/>
+            <TextBlock Text="Jouw tijd:" FontSize="20" Width="100 px" Height="50px" Foreground="White" Margin="40,10,60,80" RenderTransformOrigin="0.723,0.479" />
+            <TextBlock Text="Kortste tijd:" FontSize="20" Width="150 px" Height="50px" Foreground="White" Margin="40,32,10,58" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Label x:Name="HighscoreTime" Content="00:00" FontSize="40" Width="130" Height="76" Foreground="White" Margin="40,54,30,10" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
+            <Label x:Name="naamspeler1" Content="player 1" Width="100" Height="50" Foreground="White" Margin="40,10,60,230.4" />
+        </Grid>
     </Grid>
 </Window>
