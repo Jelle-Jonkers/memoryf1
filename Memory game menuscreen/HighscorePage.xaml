@@ -1,0 +1,16 @@
+﻿<Window x:Class="Memory_game_menuscreen.HighscorePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory_game_menuscreen"
+        mc:Ignorable="d"
+        Title="HighscorePage" Height="450" Width="800" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+    <Grid Background="#FF212121">
+        <Button x:Name="btn_4x4" Background="PaleVioletRed" Content="4x4" Height="40" Width="100" FontSize="28" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Click="btn_4x4_Click" Margin="20,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button x:Name="btn_6x6" Background="PaleVioletRed" Content="6x6" Height="40" Width="100" FontSize="28" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Click="btn_6x6_Click" Margin="20,140,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button x:Name="sluiten" Background="PaleVioletRed" Content="Sluiten" Height="40" Width="100" FontSize="20" Foreground="White" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Click="Sluiten" Margin="20,0,0,20" HorizontalAlignment="Left" VerticalAlignment="Bottom" />
+        <TextBlock FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Height="40" Width="250" TextAlignment="center" Foreground="White" FontSize="35" Margin="0,20,0,0" VerticalAlignment="Top" HorizontalAlignment="Center">Highscores</TextBlock>
+        <Label x:Name="lbl_Highscores" Width="400" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" HorizontalContentAlignment="Center" Foreground="White" Margin="0,75,0,0" FontSize="20" Content="test"></Label>
+    </Grid>
+</Window>
