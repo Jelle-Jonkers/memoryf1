@@ -1,0 +1,45 @@
+﻿<Window x:Class="Memory_game_menuscreen.GameWindowMP"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Memory_game_menuscreen"
+        mc:Ignorable="d"
+        Title="GameWindowMP" Height="900" Width="1600" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+    <Grid Background="#FF212121">
+        <Grid Height="250" Width="200" HorizontalAlignment="Left" Margin="0,303,0,317.4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*"/>
+                <ColumnDefinition Width="157*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="Naam1" Content="Player 1" Grid.Row="0" Foreground="White" Margin="43,1,-43,49.8" Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" FontSize="15"/>
+            <Label x:Name="Naam2" Content="Player 2" Grid.Row="2" Foreground="White" Margin="43,0.2,-43,0.2" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" Grid.ColumnSpan="2" FontSize="15"/>
+            <Label x:Name="Score1" Content="0" Foreground="White" Height="50" Grid.Row="1" Grid.ColumnSpan="2" Margin="43,0.6,-43,50.2" Grid.RowSpan="2" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" FontSize="30"/>
+            <Label x:Name="Score2" Content="0" Foreground="White" Height="50" Grid.Row="2" Grid.ColumnSpan="2" Margin="43,50.2,-43,0.6" Grid.RowSpan="2" FontFamily="/Memory game menuscreen;component/Fonts/#Formula1 Display Regular" FontSize="30"/>
+
+        </Grid>
+        <Grid x:Name="MainGridMP" Margin="10" Width="{Binding ElementName=MainGridMP,Path=ActualHeight}">
+
+        </Grid>
+        <Grid Width="150" Height="300" HorizontalAlignment="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button FontSize="30" Grid.Row="2" Content="RESET" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Click="Reset" Margin="-52,346.6,52,-365.4"/>
+            <Button FontSize="30" Grid.Row="2" Content="Terug" Width="150px" Height="50"  Background="PaleVioletRed" Foreground="White" Click="BackMP" Margin="-52,419.6,52,-438.4"/>
+
+        </Grid>
+    </Grid>
+</Window>
